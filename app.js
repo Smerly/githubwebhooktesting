@@ -9,8 +9,8 @@ app.listen(
     () => console.log(`app is running on http://localhost:${8080}`)
 )
 
-app.get('/github-repo', (req, res, next) =>{
-    
+app.post('/github', (req, res) => {
+    console.log('acquired')
     console.log(req.body)
-    res.send({response:'Hello World'})
+    res.send("Github webhook received")
 })
